@@ -8,8 +8,8 @@ def altf4(count=1, interval=0.2):
       _time.sleep(interval)
 
 def open_app(name):
-  _pag.hotkey("gui")
-  _time.sleep(0.5)
+  _pag.hotkey("win")
+  _time.sleep(0.75)
   _pag.write(name)
   _time.sleep(0.25)
   _pag.hotkey("enter")
