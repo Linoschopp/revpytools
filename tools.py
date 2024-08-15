@@ -28,7 +28,7 @@ def open_url(url):
   _time.sleep(0.75)
   if not (url.startswith("http://") or  url.startswith("https://")):
     url = f"http://"+url
-  url = url.split("/"):
+  url = url.split("/")
   for p in range(len(url)-1):
       _pag.write(url[p])
       slash()
