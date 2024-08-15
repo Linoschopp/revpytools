@@ -14,4 +14,3 @@ def open_app(name):
   _time.sleep(0.25)
   _pag.hotkey("enter")
 
-print("ok")
