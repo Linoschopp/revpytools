@@ -14,6 +14,11 @@ def open_app(name):
   _time.sleep(0.25)
   _pag.hotkey("enter")
 
+def slash():
+  _pag.keyDown("shift")
+  _pag.hotkey("7")
+  _pag.keyUp("shift")
+
 def open_url(url):
   open_app("Google Chrome")
   _time.sleep(2)
