@@ -14,3 +14,11 @@ def open_app(name):
   _time.sleep(0.25)
   _pag.hotkey("enter")
 
+def open_url(url):
+  open_app("Google Chrome")
+  _time.sleep(2)
+  _pag.hotkey("ctrl", "l")
+  _time.sleep(0.75)
+  _pag.write(url)
+  _time.sleep(0.25)
+  _pag.hotkey("enter")
