@@ -19,6 +19,8 @@ def open_url(url):
   _time.sleep(2)
   _pag.hotkey("ctrl", "l")
   _time.sleep(0.75)
+  if not (url.startswith("http://") or  url.startswith("https://")):
+    url = "http://"+url
   _pag.write(url)
   _time.sleep(0.25)
   _pag.hotkey("enter")
