@@ -21,9 +21,9 @@ def slash(n=1):
       _pag.keyUp("shift")
   return ""
 
-def open_url(url):
+def open_url(url, open_delay=2):
   open_app("Google Chrome")
-  _time.sleep(2)
+  _time.sleep(open_delay)
   _pag.hotkey("ctrl", "l")
   _time.sleep(0.75)
   if not (url.startswith("http://") or  url.startswith("https://")):
