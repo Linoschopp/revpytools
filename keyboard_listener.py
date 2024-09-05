@@ -14,3 +14,6 @@ with keyboard.Events() as events:
                     bprint("\u23CE")
                 case Key.delete:
                     bprint("\u2421")
+                case _:
+                    if isinstance(event.key, keyboard.KeyCode):
+                        bprint(str(event.key))
