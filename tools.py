@@ -1,7 +1,7 @@
 import pynput as _pynput
 import time as _time
 
-keyboard = pynput.keyboard.Controller()
+keyboard = _pynput.keyboard.Controller()
 
 def altf4(count=1, interval=0.2):
   for x in range (count):
