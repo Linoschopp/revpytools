@@ -4,9 +4,16 @@ import time as _time
 keyboard = _pynput.keyboard.Controller()
 
 def altf4(count=1, interval=0.2):
-  for x in range (count):
+  for x in range(count):
     with keyboard.pressed(_pynput.keyboard.Key.alt):
       keyboard.tap(_pynput.keyboard.Key.f4)
+    if not x == count-1:
+      _time.sleep(interval)
+
+def minimize(count=1, interval=0.2):
+  for x in range(count):
+    with keyboard.pressed(_pynput.keyboard.Key.cmd):
+      keyboard.tap(_pynput.keyboard.Key.h)
     if not x == count-1:
       _time.sleep(interval)
 
