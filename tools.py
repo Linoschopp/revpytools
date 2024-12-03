@@ -1,4 +1,3 @@
-import pyautogui as _pag
 import pynput as _pynput
 import time as _time
 
@@ -17,12 +16,6 @@ def open_app(name):
   _time.sleep(0.25)
   keyboard.tap(pynput.keyboard.Key.enter)
 
-def slash(n=1):
-  for _ in range(n):
-      _pag.keyDown("shift")
-      _pag.hotkey("7")
-      _pag.keyUp("shift")
-  return ""
 
 def open_url(url, open_delay=2):
   open_app("Google Chrome")
@@ -30,12 +23,6 @@ def open_url(url, open_delay=2):
   with keyboard.pressed(pynput.keyboard.Key.ctrl):
     keyboard.tap("l")
   _time.sleep(0.75)
-  if not (url.startswith("http://") or  url.startswith("https://")):
-    url = f"http://"+url
-  url = url.split("/")
-  for p in range(len(url)-1):
-      _pag.write(url[p])
-      slash()
-  _pag.write(url[-1])
+  keyboard.type(url)
   _time.sleep(0.25)
-  _pag.hotkey("enter")
+  keyboard.tap(pynput.keyboard.Key.enter)
